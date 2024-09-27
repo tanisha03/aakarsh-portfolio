@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    /* background: #FFF; */
     color: #22242C;
     line-height: 1.6;
     display: flex;
@@ -25,7 +24,6 @@ body {
 
 header {
     padding: 20px;
-    width: 100%;
     max-width: 760px;
     position: relative;
 }
@@ -45,7 +43,6 @@ nav {
     padding: 12px;
     border-radius: 4px;
     background: whitesmoke;
-    /* background:rgba(255,255,255,.3); */
 }
 
 .nav-links {
@@ -172,10 +169,13 @@ nav {
    border-radius: 16px;
    padding: 40px;
    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-right: 20px;
 }
 
 .say-hi img {
-    width: 300px;
+    width: 40%;
     margin:  -40px 0;
 }
 
