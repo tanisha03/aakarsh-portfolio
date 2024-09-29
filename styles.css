@@ -26,6 +26,7 @@ header {
     padding: 20px;
     max-width: 760px;
     position: relative;
+    width: 100%;
 }
 
 main{
@@ -43,6 +44,7 @@ nav {
     padding: 12px;
     border-radius: 4px;
     background: whitesmoke;
+    width: 100%;
 }
 
 .nav-links {
@@ -81,9 +83,44 @@ nav {
     font-size: 20px;
 }
 
-.tools img {
-    height: 30px;
-    margin-right: 10px;
+.image-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 28px;
+}
+
+/* Wrapper that contains all the images */
+.carousel-wrapper {
+    display: flex;
+    min-width: 100%;
+    animation: scroll 10s linear infinite;
+}
+
+/* Individual images */
+.carousel-wrapper img {
+    height: 22px;
+    width: auto;
+    margin-right: 32px;
+    opacity: 0.3;
+    flex-shrink: 0; 
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Optional - If you want it to be responsive */
+@media screen and (max-width: 768px) {
+    .carousel-wrapper img {
+        width: 100%;
+    }
 }
 
 .featured-projects {
@@ -102,13 +139,35 @@ nav {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 36px;
 }
 
-.project:hover {
-    background: #fafafa;
+.project {
+    padding: 12px;
+    margin: -12px;
     border-radius: 8px;
-    padding: 16px;
+    background: transparent; 
+    position: relative; 
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(258.32deg,#FBFBFD 0%,#E795B7 32.71%,#935893 65.43%,#224D88 98.14%);
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    border-radius: inherit; 
+    z-index: -1; 
+}
+
+.project:hover::before {
+    opacity: 0.1;
 }
 
 .project img {
@@ -214,6 +273,17 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+footer #list-items {
+    display: flex;
+}
+
+footer #list-items .link-items {
+    margin: 0 8px;
+    font-size: 12px;
+    margin-top: 8px;
+    opacity: 0.7;
 }
 
 .bg-gradient-bottom{
