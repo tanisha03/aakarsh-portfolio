@@ -88,13 +88,14 @@ nav {
     overflow: hidden;
     position: relative;
     margin-top: 28px;
+    display: flex;
 }
 
 /* Wrapper that contains all the images */
 .carousel-wrapper {
-    display: flex;
+    flex: 0 0 auto;
     min-width: 100%;
-    animation: scroll 10s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 
 /* Individual images */
@@ -113,13 +114,6 @@ nav {
     }
     100% {
         transform: translateX(-100%);
-    }
-}
-
-/* Optional - If you want it to be responsive */
-@media screen and (max-width: 768px) {
-    .carousel-wrapper img {
-        width: 100%;
     }
 }
 
