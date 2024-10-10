@@ -48,7 +48,7 @@ nav {
     width: 100%;
 }
 
-#signature{
+.signature{
     width: 60px;
     transform: rotate(6deg);
 }
