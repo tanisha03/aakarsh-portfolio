@@ -29,6 +29,7 @@ header {
     width: 100%;
 }
 
+
 main{
     max-width: 760px;
     padding: 20px;
@@ -45,6 +46,11 @@ nav {
     border-radius: 4px;
     background: whitesmoke;
     width: 100%;
+}
+
+#signature{
+    width: 60px;
+    transform: rotate(6deg);
 }
 
 .nav-links {
