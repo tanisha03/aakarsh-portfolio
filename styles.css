@@ -286,6 +286,23 @@ footer #list-items .link-items {
     opacity: 0.7;
 }
 
+footer .quote{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #bbb;
+    font-size: 12px;
+    margin-top: 32px;
+}
+
+footer .quote p{
+   margin: 0 16px;
+}
+
+footer .quote .left{
+   transform: rotateY(180deg);
+ }
+
 .bg-gradient-bottom{
     position: absolute;
     bottom: 0;
